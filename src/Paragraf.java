@@ -1,10 +1,14 @@
+import java.util.ArrayList;
 
-public class Paragraf {
+
+public class Paragraf extends AbstractElement{
 	private String text;
-
-	public Paragraf(String text) {
+	private AlignStrategy alignment;
+	
+	public Paragraf(String text, AlignStrategy alignment) {
 		super();
 		this.text = text;
+		this.alignment = alignment;
 	}
 
 	public String getText() {
@@ -15,9 +19,13 @@ public class Paragraf {
 		this.text = text;
 	}
 
-	@Override
-	public String toString() {
-		return "Paragraf [text=" + text + "]";
+	public void print() {
+		if(this.alignment == null) {
+			System.out.println("*" + this.text);
+		} else {
+			this.alignment.printAligned(this.text);
+		}
+		
 	}
 	
 }

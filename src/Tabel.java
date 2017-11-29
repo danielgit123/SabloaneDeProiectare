@@ -1,5 +1,5 @@
 
-public class Tabel {
+public class Tabel extends AbstractElement{
 	private String nume;
 
 	public Tabel(String nume) {
@@ -14,9 +14,9 @@ public class Tabel {
 		this.nume = nume;
 	}
 
-	@Override
-	public String toString() {
-		return "Tabel [nume=" + nume + "]";
+	public void print() {
+		System.out.println("Tabel [nume=" + nume + "]");
+		
 	}
 
 }

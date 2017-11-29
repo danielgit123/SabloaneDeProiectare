@@ -5,6 +5,9 @@ public class Carte {
 	private ArrayList<Autor> autori;
 	private Cuprins cuprins;
 	private ArrayList<Element> capitole;
+	public AlignStrategy leftAlignment = new LeftAlignment();
+	public AlignStrategy centerAlignment= new CenterAlignment();
+	public AlignStrategy rightAlignment = new RightAlignment();
 	
 	public Carte() {
 		this.titlu = "";
@@ -20,6 +23,12 @@ public class Carte {
 	}
 	
 	public void print(){
+		System.out.println("Titlu: " + this.titlu);
+		System.out.print("Autori: ");
+		for(Autor autor : this.autori) {
+			System.out.print(autor + (autor == this.autori.get(this.autori.size() -1) ? "\n" : ", "));
+		}
+		
 		for(Element e : this.capitole){
 			e.print();
 		}

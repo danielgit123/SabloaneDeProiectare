@@ -1,10 +1,12 @@
 
-public class Imagine {
+public class Imagine extends AbstractElement{
 	private String nume;
-
+//	private ImageData data;
+	
 	public Imagine(String nume) {
 		super();
 		this.nume = nume;
+//		data = this.loadFromFIle(filename);
 	}
 
 	public String getNume() {
@@ -15,14 +17,13 @@ public class Imagine {
 		this.nume = nume;
 	}
 
-	@Override
-	public String toString() {
-		return "Imagine [nume=" + nume + "]";
-	}
-	
 	public void print() {
 		System.out.println("Imagine [nume=" + nume + "]");
 		
 	}
+	
+//	public void loadFromFile(filename) {
+//		//data loader
+//	}
 	
 }
