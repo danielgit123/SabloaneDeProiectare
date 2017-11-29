@@ -20,5 +20,9 @@ public class Imagine {
 		return "Imagine [nume=" + nume + "]";
 	}
 	
+	public void print() {
+		System.out.println("Imagine [nume=" + nume + "]");
+		
+	}
 	
 }
